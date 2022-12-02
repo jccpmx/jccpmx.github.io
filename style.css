@@ -1,0 +1,14 @@
+html{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body{
+    margin: 0;
+    text-align: center;
+    background-color: black;
+    color: aliceblue;
+}
+
+.container{
+    font-size: 28px;
+}
