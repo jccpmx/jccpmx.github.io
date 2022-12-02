@@ -2,5 +2,4 @@
 
 ## Data Engineer
 
-
-Iam in Twitter @jccpmx
+Twitter @jccpmx
