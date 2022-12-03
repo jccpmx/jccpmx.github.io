@@ -4,48 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JCCP Resume Page</title>
-
-    <link
-      rel="preload"
-      href="/jccppage-c3312007da1bc91_bg.wasm"
-      as="fetch"
-      type="application/wasm"
-      crossorigin=""
-    />
-    <link rel="modulepreload" href="/jccppage-c3312007da1bc91.js" />
+    <title>JCCPmx Page</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <script type="module">
-      import init from "/jccppage-c3312007da1bc91.js";
-      init("/jccppage-c3312007da1bc91_bg.wasm");
-    </script>
-    <script>
-      (function () {
-        var protocol = window.location.protocol === "https:" ? "wss:" : "ws:";
-        var url = protocol + "//" + window.location.host + "/_trunk/ws";
-        var poll_interval = 5000;
-        var reload_upon_connect = () => {
-          window.setTimeout(() => {
-            // when we successfully reconnect, we'll force a
-            // reload (since we presumably lost connection to
-            // trunk due to it being killed, so it will have
-            // rebuilt on restart)
-            var ws = new WebSocket(url);
-            ws.onopen = () => window.location.reload();
-            ws.onclose = reload_upon_connect;
-          }, poll_interval);
-        };
-
-        var ws = new WebSocket(url);
-        ws.onmessage = (ev) => {
-          const msg = JSON.parse(ev.data);
-          if (msg.reload) {
-            window.location.reload();
-          }
-        };
-        ws.onclose = reload_upon_connect;
-      })();
-    </script>
+    <div class="container">
+      <h1>JCCPmx Page</h1>
+    </div>
   </body>
 </html>
